@@ -9,4 +9,10 @@ Based on / inspired by these nice SCNTechnique examples.
 https://github.com/lachlanhurst/SCNTechniqueTest
 https://github.com/kosua20/Technique-iOS
 
-![screenshot](screenshot.jpg "A Screenshot")
+
+
+<img width="300" src="screenshot.jpg">
+
+
+
+
