@@ -41,14 +41,14 @@ fragment half4 mask_fragment(out_vertex_t in [[stage_in]],
 ////////////
 
 constexpr sampler s = sampler(coord::normalized,
-                              address::repeat,
+                              address::clamp_to_zero,
                               filter::linear);
 
 vertex out_vertex_t combine_vertex(custom_vertex_t in [[stage_in]])
 {
     out_vertex_t out;
     out.position = in.position;
-    out.uv = float2((in.position.x + 1.0) * 0.5 , (in.position.y + 1.0) * -0.5);
+    out.uv = float2( (in.position.x + 1.0) * 0.5, 1.0 - (in.position.y + 1.0) * 0.5 );
     return out;
 };
 
@@ -80,7 +80,7 @@ vertex out_vertex_t blur_vertex(custom_vertex_t in [[stage_in]])
 {
     out_vertex_t out;
     out.position = in.position;
-    out.uv = float2((in.position.x + 1.0) * 0.5 , (in.position.y + 1.0) * -0.5);
+    out.uv = float2( (in.position.x + 1.0) * 0.5, 1.0 - (in.position.y + 1.0) * 0.5 );
     return out;
 };
 
