@@ -10,6 +10,15 @@ import UIKit
 import QuartzCore
 import SceneKit
 
+extension SCNNode {
+    func setHighlighted( _ highlighted : Bool = true, _ highlightedBitMask : Int = 2 ) {
+        categoryBitMask = highlightedBitMask
+        for child in self.childNodes {
+            child.setHighlighted()
+        }
+    }
+}
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -63,8 +72,9 @@ class GameViewController: UIViewController {
 
         
         // Set the bitmask to 2 for glow
-        // go one deeper, not sure why
-        ship.childNodes[0].categoryBitMask = 2
+        //ship.childNodes[0].categoryBitMask = 2
+        ship.setHighlighted()
+        
         
         if let path = Bundle.main.path(forResource: "NodeTechnique", ofType: "plist") {
             if let dict = NSDictionary(contentsOfFile: path)  {
