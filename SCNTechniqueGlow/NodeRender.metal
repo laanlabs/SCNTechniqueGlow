@@ -41,7 +41,8 @@ fragment half4 mask_fragment(out_vertex_t in [[stage_in]],
 ////////////
 
 constexpr sampler s = sampler(coord::normalized,
-                              address::clamp_to_zero,
+                              r_address::clamp_to_edge,
+                              t_address::repeat,
                               filter::linear);
 
 vertex out_vertex_t combine_vertex(custom_vertex_t in [[stage_in]])
