@@ -15,7 +15,7 @@
 			<key>metalFragmentShader</key>
 			<string>mask_fragment</string>
 			<key>includeCategoryMask</key>
-			<string>2</string>
+			<integer>2</integer>
 			<key>inputs</key>
 			<dict>
 				<key>colorSampler</key>
