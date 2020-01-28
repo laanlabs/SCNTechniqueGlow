@@ -23,3 +23,17 @@ For now you will have to manually add blur passes in NodeTechnique.plist. Check 
 For now you need to manually edit the NodeTechnique.plist here: 
 https://github.com/laanlabs/SCNTechniqueGlow/blob/master/SCNTechniqueGlow/NodeRender.metal#L69
 You can make this modifiable at run time by exposing the variable through the technique; feel free to submit a pull request for this.
+
+
+## Author
+
+This project was created by Laan Labs. We design and build solutions at the intersection of Computer Vision and Augmented Reality.
+
+[http://labs.laan.com](http://labs.laan.com)
+
+[@laanlabs](https://twitter.com/laanlabs)
+
+
+## License
+
+SCNTechniqueGlow is released under the MIT License. See [LICENSE](LICENSE) for details.
