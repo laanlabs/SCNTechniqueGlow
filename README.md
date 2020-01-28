@@ -20,9 +20,11 @@ https://github.com/kosua20/Technique-iOS
 For now you will have to manually add blur passes in NodeTechnique.plist. Check the 'sequence' key. This is where the blur passes are defined. Each blur stage requires two blur passes: a horizontal + vertical pass. So make sure to add 'pass_blur_h' along with 'pass_blur_v' or you will end up with an uneven glow. 
 
 ### How do I change the blur color? 
-For now you need to manually edit the NodeTechnique.plist here: 
-https://github.com/laanlabs/SCNTechniqueGlow/blob/master/SCNTechniqueGlow/NodeRender.metal#L69
-You can make this modifiable at run time by exposing the variable through the technique; feel free to submit a pull request for this.
+
+You can pass the color from swift into the metal shader when setting up the technique [here](https://github.com/laanlabs/SCNTechniqueGlow/blob/master/SCNTechniqueGlow/GameViewController.swift#L86). It should look something like this:
+
+    let color = SCNVector3(1.0, 1.0, 0.0)
+    technique.setValue(NSValue(scnVector3: color), forKeyPath: "glowColorSymbol")
 
 
 ## Author
