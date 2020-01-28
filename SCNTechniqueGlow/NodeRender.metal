@@ -21,6 +21,10 @@ struct out_vertex_t
     float2 uv;
 };
 
+typedef struct {
+    float3 glowColor;
+} Inputs;
+
 
 vertex out_vertex_t mask_vertex(custom_vertex_t in [[stage_in]],
                                         constant custom_node_t3& scn_node [[buffer(0)]])
@@ -55,8 +59,9 @@ vertex out_vertex_t combine_vertex(custom_vertex_t in [[stage_in]])
 
 
 fragment half4 combine_fragment(out_vertex_t vert [[stage_in]],
-                                          texture2d<float, access::sample> colorSampler [[texture(0)]],
-                                          texture2d<float, access::sample> maskSampler [[texture(1)]])
+                                texture2d<float, access::sample> colorSampler [[texture(0)]],
+                                texture2d<float, access::sample> maskSampler [[texture(1)]],
+                                constant Inputs& inputs [[buffer(0)]])
 {
     
     float4 FragmentColor = colorSampler.sample( s, vert.uv);
@@ -66,8 +71,8 @@ fragment half4 combine_fragment(out_vertex_t vert [[stage_in]],
     if ( maskColor.g > 0.5 ) {
         return half4(FragmentColor);
     }
-    
-    float3 glowColor = float3(1.0, 1.0, 0.0);
+
+    float3 glowColor = inputs.glowColor;
     
     float alpha = maskColor.r;
     float3 out = FragmentColor.rgb * ( 1.0 - alpha ) + alpha * glowColor;

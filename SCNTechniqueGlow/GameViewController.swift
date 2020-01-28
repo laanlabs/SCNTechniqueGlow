@@ -80,6 +80,11 @@ class GameViewController: UIViewController {
             if let dict = NSDictionary(contentsOfFile: path)  {
                 let dict2 = dict as! [String : AnyObject]
                 let technique = SCNTechnique(dictionary:dict2)
+
+                // set the glow color to yellow
+                let color = SCNVector3(1.0, 1.0, 0.0)
+                technique?.setValue(NSValue(scnVector3: color), forKeyPath: "glowColorSymbol")
+
                 scnView.technique = technique
             }
         }
