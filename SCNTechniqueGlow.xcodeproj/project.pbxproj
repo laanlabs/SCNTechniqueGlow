@@ -15,6 +15,7 @@
 		42E326E31F44979F00E3B844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E326E11F44979F00E3B844 /* LaunchScreen.storyboard */; };
 		42E326EC1F4497C200E3B844 /* NodeRender.metal in Sources */ = {isa = PBXBuildFile; fileRef = 42E326EA1F4497C200E3B844 /* NodeRender.metal */; };
 		42E326ED1F44986700E3B844 /* NodeTechnique.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42E326EB1F4497C200E3B844 /* NodeTechnique.plist */; };
+		53828A9E23E1B03F00223329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53828A9D23E1B03F00223329 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		42E326E41F44979F00E3B844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42E326EA1F4497C200E3B844 /* NodeRender.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = NodeRender.metal; sourceTree = "<group>"; };
 		42E326EB1F4497C200E3B844 /* NodeTechnique.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NodeTechnique.plist; sourceTree = "<group>"; };
+		53828A9D23E1B03F00223329 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				42E326D61F44979F00E3B844 /* AppDelegate.swift */,
 				42E326D81F44979F00E3B844 /* art.scnassets */,
 				42E326DA1F44979F00E3B844 /* GameViewController.swift */,
+				53828A9D23E1B03F00223329 /* ViewController.swift */,
 				42E326EA1F4497C200E3B844 /* NodeRender.metal */,
 				42E326EB1F4497C200E3B844 /* NodeTechnique.plist */,
 				42E326DC1F44979F00E3B844 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			files = (
 				42E326DB1F44979F00E3B844 /* GameViewController.swift in Sources */,
 				42E326D71F44979F00E3B844 /* AppDelegate.swift in Sources */,
+				53828A9E23E1B03F00223329 /* ViewController.swift in Sources */,
 				42E326EC1F4497C200E3B844 /* NodeRender.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

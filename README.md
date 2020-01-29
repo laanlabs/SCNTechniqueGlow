@@ -14,6 +14,10 @@ https://github.com/kosua20/Technique-iOS
 <img width="300" src="screenshot.jpg">
 
 
+## ARKit Usage
+
+Update [Main.storyboard](SCNTechniqueGlow/Base.lproj/Main.storyboard) to launch [ViewController](SCNTechniqueGlow/ViewController.swift) to view the ARSCNView demo.
+
 
 ## FAQ
 ### How do I make the blur larger? 
